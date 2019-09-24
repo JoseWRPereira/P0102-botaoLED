@@ -4,6 +4,11 @@
  *
  * Created on 23 de Setembro de 2019, 13:03
  * 
+ * IDE:         MPLAB X IDE v3.15
+ * Compiler:    XC8 v1.45
+ * OS:          Deepin 15.11 X86_64
+ * Kernel:      4.15.0-30deepin-generic
+ * 
  * Objetivo: 
  *      Acionar um LED através do estado lógico de um botão
  * 
