@@ -42,7 +42,7 @@
  * 
  * A MICROCHIP FORNECE ESTE SOFTWARE CONDICIONALMENTE COM SUA ACEITAÇÃO 
  * DESTES TERMOS.
- * /
+ */
 
 /* 
  * File:    config.h
