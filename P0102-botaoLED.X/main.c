@@ -1,6 +1,6 @@
 /*
  * File:   main.c
- * Author: curtaeletronica
+ * Author: josewrpereira
  *
  * Created on 23 de Setembro de 2019, 13:03
  * 
@@ -15,7 +15,7 @@
  * Pinos    |nº     |Conexão
  *  VDD     |11,32  | Alimentação (Vcc/+5V)
  *  VSS     |12,31  | Alimentação (GND/0V)
- *  RD0     |19     |LED
+ *  RD0     |19     |LED (source)
  *  RD3     |22     |Botão
  */
 
@@ -33,7 +33,7 @@ void main(void)                 // Função principal = main.
     
     while( 1 )                  // Laço de repetição infinito.
     {                           // Inicio do laço de repetição.
-        if( PORTDbits.RD3 == 1 )// Condição: Se o botão estiver pressionado.
+        if( PORTDbits.RD3 == 0 )// Condição: Se o botão estiver pressionado.
             PORTDbits.RD0 = 1;  // Liga RD0.
         else                    // Senão.
             PORTDbits.RD0 = 0;  // Desliga RD0.
