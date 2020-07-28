@@ -33,7 +33,7 @@ void main(void)                 // Função principal = main.
     
     while( 1 )                  // Laço de repetição infinito.
     {                           // Inicio do laço de repetição.
-        if( PORTDbits.RD3 == 0 )// Condição: Se o botão estiver pressionado.
+        if( PORTDbits.RD3 == 1 )// Condição: Se o botão estiver pressionado.
             PORTDbits.RD0 = 1;  // Liga RD0.
         else                    // Senão.
             PORTDbits.RD0 = 0;  // Desliga RD0.
