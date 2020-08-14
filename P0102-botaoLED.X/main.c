@@ -19,12 +19,58 @@
  *  RD3     |22     |Botão
  */
 
+#include <xc.h>
+#include "config.h"
 
-#include <xc.h>                 // Inclui biblioteca padrão do compilador XC8 
-                                // para microcontroladores Microchip.
-#include "config.h"             // Inclui arq. de config. (biblioteca) local.
+#define LED             PORTDbits.RD0
+#define BOTAO           PORTDbits.RD3
 
-void main(void)                 // Função principal = main.
+void main(void)
+{
+    LED = 0;
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD3 = 1;
+    
+    while( 1 )
+    {
+        LED = !BOTAO;
+    }
+    return;
+}
+
+void main2(void)
+{
+    LED = 0;
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD3 = 1;
+    
+    while( 1 )
+    {
+        if( BOTAO )
+            LED = 1;
+        else
+            LED = 0;
+    }
+    return;
+}
+
+void main1(void)
+{
+    LED = 0;
+    TRISDbits.TRISD0 = 0;
+    TRISDbits.TRISD3 = 1;
+    
+    while( 1 )
+    {
+        if( BOTAO == 1 )
+            LED = 1;
+        else
+            LED = 0;
+    }
+    return;
+}
+
+void main0(void)                 // Função principal = main.
 {                               // Início do bloco da função main.
     PORTDbits.RD0 = 0;          // Inicia RD0 com o valor 0.
     TRISDbits.TRISD0 = 0;       // Configura RD0 como Saída.
